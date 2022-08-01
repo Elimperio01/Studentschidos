@@ -59,3 +59,29 @@ Si la variable seleccionada es salir, el usuario verá un mensaje de salida. La 
           else:
             execute(selected)
 ```
+### Función principal
+La función principal imprime el menú de opciones basado en un arreglo unidimensional con 4 string, donde el usuario elige una opción. Se inicia un ciclo llamado while que inicialmente va a ser infinito (esto no es recomendado) se imprimiran las opciones con la opción print y se almacenará en la variable selected la palabra introducida por el usuario. Se verificará si la palabra introducida existe dentro del arreglo guardado en options, si está almacenada se va a ejecutar la función de salir, explicada anteriormente, en caso contrario se va a almacenar en la variable again y si el usuario quiere continuar (y) o no (n), si el usuario escribe "yes" o (y) que el programa continue, de no ser así saldra del programa con un mensaje de despedida. 
+```python
+def get_options():
+    options = ['list', 'save', 'delete', 'exit']
+    print("Choose an option")
+
+    while True:
+      print("*___________________________*")
+      selected = input(' | '.join(options) + '\n\n>')
+      if selected in options:
+          if selected == "exit":
+            print_bye()
+            break
+          else:
+            execute(selected)
+      else:
+          print("Invalid option")
+          print("> ")
+      again = input('Continue? Type yes (y) or not(n) \n >')
+      if again == 'yes' or again == 'y':
+        continue
+      else:
+        print_bye()
+        break
+```
