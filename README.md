@@ -6,7 +6,7 @@
 **Agenda de estudiante en Phyton**
 La agenda permite guardar el nombre del estudiante y su calificación, al igual que genera un id automaticamente basado en el largo del arreglo.
 Las funciones son las siguientes:
-###Listar (*list*) :  
+### Listar (*list*) :  
 Muestra todos los alumnos registrados. Lo primero que se hace es leer el archivo .JSON con la instrucción open, después se almacena el resultado en una variable llamada "students", verificamos el largo de arreglo de los estudiantes que sea igual a 0 y si es igual a 0 mostramos el mensaje "Nothing to see here, son. Keep walking\n\n". De no mostrar el mensaje no ejecuta la siguiente instrucción, posteriormente recorre el arreglo de estudiantes y muestra los resultados con la instrucción print.
 ```python
 def read_students():
