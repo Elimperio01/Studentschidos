@@ -18,7 +18,7 @@ def read_students():
         for student in students:
           print(student["id"] + ".- \n Name: " + student["name"] + "\n Score:" + student["score"] + "\n________________________")
 ```
-###Guardar (*save*) : 
+### Guardar (*save*) : 
 Guarda todos los alumnos registrados. Lo primero que se hace es leer el archivo .JSON con la instrucción open, después se almacena el resultado en una variable llamada "students". Se crea una variable llamada name que almacena la entrada del usuario del nombre, posterior la variable score que almacena la calificación del estudiante y el id se almacenará automaticamente de acuerdo al largo del arreglo de students sumandole 1 para evitar enlaces. Students mostrará al codificador el objeto student que se va a adjuntar (append), con la instrucción open se va a almacenar al resultado en el archivo .JSON.
 ```python
 def save_student():
@@ -32,7 +32,7 @@ def save_student():
     with open("students.json", "w") as students_json:
       json.dump(students, students_json)
 ```
-###Borrar (*delete*):
+### Borrar (*delete*):
 Para borrar a un estudiante se inicializa la varible con indice 0 para cuando se ejecute el programa saber cuantos alumnos estan registrados.  Lo primero que se hace es leer el archivo .JSON con la instrucción open, después se almacena el resultado en una variable llamada "students". Se crea una variable llamada id en donde el usuario introduce el id a borrar. En la siguiente instrucción se imprime el id introducido y luego se recorre el arreglo students en donde se va a verificar si el id existe dentro del archivo .JSON y en caso de no ser así le va a aumentar un 1 a la variable indice.
 ```python
 def delete_student():
@@ -50,7 +50,7 @@ def delete_student():
           return
         indice += 1
 ```
-###Salir (*exit*):
+### Salir (*exit*):
 Si la variable seleccionada es salir, el usuario verá un mensaje de salida. La función print bye sería ejecutada al hacer la elección y con la instrucción break se rompe el ciclo while del cuerpo del codigo. En caso de no ser así, ejecutará la instrucción seleccionada.
 ```python
          if selected == "exit":
